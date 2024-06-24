@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="./caixa.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Carregamento Spinner -->
+    <div class="loading-overlay" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container" style="display: none;" id="content">
         <div class="header">
             <span>CONSULTA DE PREÇO E ESTOQUE</span>
         </div>
@@ -32,13 +37,23 @@
                 </div>
             </div>
             <div class="total">
-                <!-- <span>QTD. ITENS</span>
-                <span id="total-items">0</span> -->
                 <span>SUBTOTAL</span>
                 <span id="subtotal">0,00</span>
             </div>
         </div>
     </div>
     <script type="module" src="./caixa.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loading = document.getElementById('loading');
+            const content = document.getElementById('content');
+
+            // Simulando carregamento
+            setTimeout(() => {
+                loading.style.display = 'none';
+                content.style.display = 'block';
+            }, 2000); // Ajuste o tempo conforme necessário
+        });
+    </script>
 </body>
 </html>
