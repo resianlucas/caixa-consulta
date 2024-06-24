@@ -68,7 +68,7 @@ async function getProductByEan(ean) {
 }
 
 function updateProductDetails(product) {
-    document.getElementById('product-image').src = product.imageUrl || 'placeholder.jpg';
+    document.getElementById('product-image').src = product.imageUrl || 'https://i.ibb.co/9stvHsP/placeholder-sem-foto.png';
     document.getElementById('last-scanned').textContent = product.name;
     document.getElementById('quantity').textContent = `Quantidade: ${product.quantity || 0}`;
     document.getElementById('price').textContent = `Preço: ${product.price}`;
