@@ -1,0 +1,8 @@
+{
+    "routes": [
+      { "src": "/desktop", "dest": "/src/desktop/index.html" },
+      { "src": "/mobile", "dest": "/src/mobile/index.html" },
+      { "src": "/", "dest": "/src/desktop/index.html" }
+    ]
+  }
+  

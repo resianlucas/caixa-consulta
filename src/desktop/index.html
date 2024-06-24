@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <script>
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            window.location.href = '/mobile';
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caixa Eletrônico</title>
-    <link rel="shortcut icon" type="imagex/png" href="./images/logo.png">
+    <title>Caixa Eletrônico - Desktop</title>
+    <link rel="shortcut icon" type="imagex/png" href="/images/logo.png">
     <link rel="stylesheet" href="./caixa.css">
 </head>
 <body>
-    <!-- Carregamento Spinner -->
-    <div class="loading-overlay" id="loading">
-        <div class="spinner"></div>
-    </div>
-
-    <div class="container" style="display: none;" id="content">
+    <div class="container">
         <div class="header">
             <span>CONSULTA DE PREÇO E ESTOQUE</span>
         </div>
@@ -43,17 +43,5 @@
         </div>
     </div>
     <script type="module" src="./caixa.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const loading = document.getElementById('loading');
-            const content = document.getElementById('content');
-
-            // Simulando carregamento
-            setTimeout(() => {
-                loading.style.display = 'none';
-                content.style.display = 'block';
-            }, 2000); // Ajuste o tempo conforme necessário
-        });
-    </script>
 </body>
 </html>
