@@ -1,4 +1,4 @@
-import { db } from '/database/firebase.js';
+import { db } from '/public/database/firebase.js';
 import { ref, get, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 let productCounters = {};
