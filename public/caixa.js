@@ -70,7 +70,7 @@ async function getProductByEan(ean) {
 function updateProductDetails(product) {
     document.getElementById('product-image').src = product.imageUrl || 'placeholder.jpg';
     document.getElementById('last-scanned').textContent = product.name;
-    document.getElementById('quantity').textContent = `Quantidade: ${productCounters[product.sku] || 0}`;
+    document.getElementById('quantity').textContent = `Quantidade: ${product.quantity || 0}`;
     document.getElementById('price').textContent = `Preço: ${product.price}`;
     document.getElementById('subtotal').textContent = `Preço: R$ ${product.price}`
 
