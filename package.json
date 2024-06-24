@@ -1,0 +1,8 @@
+{
+    "name": "caixa-consulta",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "echo 'Skipping build' && exit 0"
+    }
+  }
+  
