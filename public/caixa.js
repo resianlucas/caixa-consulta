@@ -1,5 +1,21 @@
-import { db } from './firebase';
-import { ref, get, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, get, child, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+// Configuração do Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyDJTzpoFxQ9_W0JCGPXfwFasr_vdywwePs",
+    authDomain: "hub-stock-control.firebaseapp.com",
+    databaseURL: "https://hub-stock-control-default-rtdb.firebaseio.com",
+    projectId: "hub-stock-control",
+    storageBucket: "hub-stock-control.appspot.com",
+    messagingSenderId: "1006784039020",
+    appId: "1:1006784039020:web:5b824b2c2f0a2deed47049",
+    measurementId: "G-LDEPBP8926"
+};
+
+// Inicializa o Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
 let productCounters = {};
 let products = {};
@@ -61,20 +77,3 @@ function updateProductDetails(product) {
     const scannedProducts = document.getElementById('scanned-products');
     scannedProducts.value += `${product.name}\n`;
 }
-
-// function incrementProductCounter(sku) {
-//     if (!productCounters[sku]) {
-//         productCounters[sku] = 0;
-//     }
-//     productCounters[sku]++;
-//     document.getElementById('quantity').textContent = `Quantidade: ${productCounters[sku]}`;
-
-//     const totalItems = Object.values(productCounters).reduce((a, b) => a + b, 0);
-//     document.getElementById('total-items').textContent = totalItems;
-
-//     const subtotal = Object.entries(productCounters).reduce((total, [key, value]) => {
-//         const product = products[key];
-//         return total + (product.price * value);
-//     }, 0);
-//     document.getElementById('subtotal').textContent = subtotal.toFixed(2);
-// }
