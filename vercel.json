@@ -1,7 +1,6 @@
 {
   "rewrites": [
     { "source": "/desktop", "destination": "/src/desktop/index.html" },
-    { "source": "/mobile", "destination": "/src/mobile/index.html" },
-    { "source": "/", "destination": "/src/desktop/index.html" }
+    { "source": "/mobile", "destination": "/src/mobile/index.html" }
   ]
 }
