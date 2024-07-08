@@ -77,5 +77,5 @@ function updateProductDetails(product) {
     const scannedProducts = document.getElementById('scanned-products');
     scannedProducts.value += 
     `${product.name}: R$${product.price}\n` +
-    '___________________________________________\n';
+    '_____________________________________________________\n';
 }
