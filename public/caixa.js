@@ -75,5 +75,5 @@ function updateProductDetails(product) {
     document.getElementById('subtotal').textContent = `Preço: R$ ${product.price}`
 
     const scannedProducts = document.getElementById('scanned-products');
-    scannedProducts.value += `${product.name}\n`;
+    scannedProducts.value += `${product.name}: R$${product.price}\n`;
 }
